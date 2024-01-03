@@ -77,6 +77,14 @@ def isbasic(request):
         if request.method == 'POST': 
             private_key=request.POST.get('private_key')
             ans=transactEth(request,0.05,private_key)
+            try:
+                myuser=User.objects.get(email=request.user.email)
+                profile=Customer.objects.get(user=myuser)
+                profile.is_basic=True
+                profile.save()
+            except:
+                messages.error(request, 'Error - Internal Error cant fetch email.')
+                return redirect('pricing')
             if(ans == 0):
                 messages.error(request, 'Error - Unable to transact.')
                 return redirect('pricing')
@@ -91,6 +99,14 @@ def ispremium(request):
         if request.method == 'POST':
             private_key=request.POST.get('private_key')
             ans=transactEth(request,0.1,private_key)
+            try:
+                myuser=User.objects.get(email=request.user.email)
+                profile=Customer.objects.get(user=myuser)
+                profile.is_premium=True
+                profile.save()
+            except:
+                messages.error(request, 'Error - Internal Error cant fetch email.')
+                return redirect('pricing')
             if(ans == 0):
                 messages.error(request, 'Error - Unable to transact.')
                 return redirect('pricing')
