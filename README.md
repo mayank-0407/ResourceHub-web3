@@ -1,5 +1,5 @@
 # Problem Statement         [![ResourceHub Workflow With Blockchain](https://github.com/mayank-0407/ResourceHub/actions/workflows/django.yml/badge.svg)](https://github.com/mayank-0407/ResourceHub/actions/workflows/django.yml)
-Create a platform for students to publicaly post their needs such as tutoring and resources, and for volunteers to subscribe and offer help volunteers will have profiles with skills and activity recorded. the platform could offer a subscription model with premium features and fees going towards maintenance.
+Created a platform for students to publicaly post their needs such as tutoring and resources, and for volunteers to subscribe and offer help volunteers will have profiles with skills and activity recorded. the platform could offer a subscription model with premium features and fees going towards maintenance.
 
 # Process Idealogy
 ![WhatsApp Image 2023-04-16 at 09 55 40](https://user-images.githubusercontent.com/97796657/233675646-28e2369b-bd59-45a1-b21b-f539916411de.jpg)
